@@ -22,8 +22,21 @@
 
 > Flutter 工程模式
 
-- `Flutter Application`: 构建一个标准 Flutter APP（统一管理模式），包含 Dart 层和平台层（IOS/Android）
+- `Flutter App`: 构建一个标准 Flutter APP（统一管理模式），包含 Dart 层和平台层（IOS/Android）
 - `Flutter Module`: 创建一个 Flutter 模块（三端分离模式），以模块的形式分别嵌入原生项目
 - `Flutter Package`: 纯 Dart 插件工程，不依赖 Flutter，仅包含 Dart 层的实现，通常用来定义一些公共库
 - `Flutter Plugin`: Flutter 平台插件，包含 Dart 层与 Native 平台层的实现，是一种特殊的 Flutter Package
 - `Flutter Skeleton`: 自动生成 Flutter 模板，提供常用框架
+
+> 使用 flutter 命令创建工程模式的项目
+
+`flutter create projectName`
+
+- 用法：
+  `-template=type` 指定不同的项目类型，
+  `-template=app/module/package/plugin/skeleton`
+
+- 指定平台：
+  `-platforms=ios/android/windows/linux/macos/web`
+  `-a` => 指定`android`开发使用的语言，默认是`kotlin`
+  `-i` => 指定`ios`使用的语言，默认是`Swift`
