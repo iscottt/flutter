@@ -40,3 +40,9 @@
   `-platforms=ios/android/windows/linux/macos/web`
   `-a` => 指定`android`开发使用的语言，默认是`kotlin`
   `-i` => 指定`ios`使用的语言，默认是`Swift`
+
+> Flutter Native 桥接通道
+
+- `BasicMessageChannel`: 用于传递字符串和半结构化的信息
+- `EventChannel`: 用于数据流（event streams）的通信
+- `MethodChannel`: 用于传递方法调用（method invocation）(主要方式)
