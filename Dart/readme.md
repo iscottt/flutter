@@ -241,6 +241,23 @@ void main() {
   print(a is! int);
 }
 ```
+> Dart中的级联运算符（..）
+```dart
+void main() {
+  Person p = Person();
+  p.name = '张三';
+  p.age = 20;
+  p.run();
+}
+class Person {
+  String name = '';
+  int age = 0;
+  void run() {
+    print('run $name $age');
+    // run 张三 20
+  }
+}
+```
 ### 2.6 Dart流程控制语句
 > Dart中的流程控制语句分为：if语句、switch语句、for语句、while语句、do-while语句、break语句、continue语句、label语句
 > Dart中的if语句
