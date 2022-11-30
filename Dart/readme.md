@@ -276,6 +276,107 @@ void main() {
   print(a is! int);
 }
 ```
+### 2.6 Dart流程控制语句
+> Dart中的流程控制语句分为：if语句、switch语句、for语句、while语句、do-while语句、break语句、continue语句、label语句
+> Dart中的if语句
+```dart
+void main() {
+  int score = 60;
+  if (score >= 90) {
+    print('优秀');
+  } else if (score >= 80) {
+    print('良好');
+  } else if (score >= 60) {
+    print('及格');
+  } else {
+    print('不及格');
+  }
+}
+```
+> Dart中的switch语句
+```dart
+void main() {
+  int score = 60;
+  switch (score) {
+    case 90:
+      print('优秀');
+      break;
+    case 80:
+      print('良好');
+      break;
+    case 60:
+      print('及格');
+      break;
+    default:
+      print('不及格');
+  }
+}
+```
+> Dart中的for语句
+```dart
+void main() {
+  for (int i = 0; i < 10; i++) {
+    print(i);
+  }
+}
+```
+> Dart中的while语句
+```dart
+void main() {
+  int i = 0;
+  while (i < 10) {
+    print(i);
+    i++;
+  }
+}
+```
+> Dart中的do-while语句
+```dart
+void main() {
+  int i = 0;
+  do {
+    print(i);
+    i++;
+  } while (i < 10);
+}
+```
+> Dart中的break语句
+```dart
+void main() {
+  for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+      break;
+    }
+    print(i);
+  }
+}
+```
+> Dart中的continue语句
+```dart
+void main() {
+  for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+      continue;
+    }
+    print(i);
+  }
+}
+```
+> Dart中的label语句
+```dart
+void main() {
+  outerLoop:
+  for (int i = 0; i < 5; i++) {
+    innerLoop:
+    for (int j = 0; j < 5; j++) {
+      if (j == 2) {
+        break outerLoop;
+      }
+      print(j);
+    }
+  }
+}
+```
 
 
 
