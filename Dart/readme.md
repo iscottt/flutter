@@ -196,6 +196,87 @@ void main() {
   print(str * 5);
 }
 ```
+### 2.5 Dart运算符
+> Dart中的运算符分为：算术运算符、关系运算符、逻辑运算符、赋值运算符、条件运算符、类型运算符
+> Dart中的算术运算符有：+、-、*、/、~/、%
+```dart
+void main() {
+  int a = 10;
+  int b = 3;
+  print(a + b);
+  print(a - b);
+  print(a * b);
+  print(a / b);
+  print(a ~/ b);
+  print(a % b);
+}
+```
+> Dart中的关系运算符有：==、!=、>、<、>=、<=
+```dart
+void main() {
+  int a = 10;
+  int b = 3;
+  print(a == b);
+  print(a != b);
+  print(a > b);
+  print(a < b);
+  print(a >= b);
+  print(a <= b);
+}
+```
+> Dart中的逻辑运算符有：&&、||、!
+```dart
+void main() {
+  bool flag1 = true;
+  bool flag2 = false;
+  print(flag1 && flag2);
+  print(flag1 || flag2);
+  print(!flag1);
+}
+```
+> Dart中的赋值运算符有：=、+=、-=、*=、/=、~/=、%=、??=
+```dart
+void main() {
+  int a = 10;
+  a += 2;
+  print(a);
+  a -= 2;
+  print(a);
+  a *= 2;
+  print(a);
+  a /= 2;
+  print(a);
+  a ~/= 2;
+  print(a);
+  a %= 2;
+  print(a);
+  a ??= 2;
+  print(a);
+}
+```
+> Dart中的条件运算符有：?:、??、??=
+```dart
+void main() {
+  int a = 10;
+  int b = 3;
+  int c = a > b ? a : b;
+  print(c);
+  int d = a ?? b;
+  print(d);
+  int e = null;
+  int f = e ?? 100;
+  print(f);
+}
+```
+> Dart中的类型运算符有：as、is、is!
+```dart
+void main() {
+  var a = 'hello';
+  print(a is String);
+  print(a is! int);
+}
+```
+
 
 
 
