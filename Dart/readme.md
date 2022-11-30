@@ -129,71 +129,36 @@ void main() {
   print(str2);
 }
 ```
-> Dart中的字符串可以使用==进行字符串的比较
-```dart
-void main() {
-  String str1 = 'hello';
-  String str2 = 'world';
-  print(str1 == str2);
-}
-```
-> Dart中的字符串可以使用isEmpty和isNotEmpty进行判断字符串是否为空
-```dart
-void main() {
-  String str1 = '';
-  String str2 = 'hello';
-  print(str1.isEmpty);
-  print(str2.isNotEmpty);
-}
-```
-> Dart中的字符串可以使用length进行获取字符串的长度
+> Dart中的字符串常用方法
+- 1.length：获取字符串的长度
+- 2.isEmpty：判断字符串是否为空
+- 3.isNotEmpty：判断字符串是否不为空
+- 4.contains：判断字符串是否包含某个子串
+- 5.startsWith：判断字符串是否以某个子串开头
+- 6.endsWith：判断字符串是否以某个子串结尾
+- 7.indexOf：获取某个子串在字符串中第一次出现的位置
+- 8.lastIndexOf：获取某个子串在字符串中最后一次出现的位置
+- 9.substring：截取字符串
+- 10.split：分割字符串
+- 11.trim：去除字符串两端的空格
+- 12.toLowerCase：将字符串转换成小写
+- 13.toUpperCase：将字符串转换成大写
 ```dart
 void main() {
   String str = 'hello world';
-  print(str.length);
-}
-```
-> Dart中的字符串可以使用contains进行判断字符串是否包含某个字符串
-```dart
-void main() {
-  String str = 'hello world';
-  print(str.contains('hello'));
-}
-```
-> Dart中的字符串可以使用substring进行截取字符串
-```dart
-void main() {
-  String str = 'hello world';
-  print(str.substring(0, 5));
-}
-```
-> Dart中的字符串可以使用split进行分割字符串
-```dart
-void main() {
-  String str = 'hello world';
-  print(str.split(' '));
-}
-```
-> Dart中的字符串可以使用trim进行去除字符串两端的空格
-```dart
-void main() {
-  String str = ' hello world ';
-  print(str.trim());
-}
-```
-> Dart中的字符串可以使用toLowerCase和toUpperCase进行字符串的大小写转换
-```dart
-void main() {
-  String str = 'Hello World';
-  print(str.toLowerCase());
-  print(str.toUpperCase());
-}
-```
-> Dart中的字符串可以使用*进行字符串的重复
-```dart
-void main() {
-  String str = 'hello';
-  print(str * 5);
+  print(str.length); // 11
+  print(str.isEmpty); // false
+  print(str.isNotEmpty); // true
+  print(str.contains('hello')); // true
+  print(str.startsWith('hello')); // true
+  print(str.endsWith('world')); // true
+  print(str.indexOf('l')); // 2
+  print(str.lastIndexOf('l')); // 9
+  print(str.substring(0, 5)); // hello
+  print(str.split(' ')); // [hello, world]
+  print(str.trim()); // hello world
+  print(str.toLowerCase()); // hello world
+  print(str.toUpperCase()); // HELLO WORLD
 }
 ```
 ### 2.5 Dart运算符
