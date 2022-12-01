@@ -307,3 +307,56 @@ class Student extends Person {
   }
 }
 ```
+
+### 2.9 Dart中的抽象类
+**Dart中的抽象类**
+```dart
+void main() {
+  // Person p = new Person();
+  Student s = new Student();
+  s.run();
+}
+abstract class Person {
+  void run();
+}
+class Student extends Person {
+  @override
+  void run() {
+    print('run');
+  }
+}
+```
+**Dart中的抽象类的抽象方法**
+```dart
+void main() {
+  // Person p = new Person();
+  Student s = new Student();
+  s.run();
+}
+abstract class Person {
+  void run();
+}
+class Student extends Person {
+  @override
+  void run() {
+    print('run');
+  }
+}
+```
+**Dart中的抽象类的抽象方法的实现**
+```dart
+void main() {
+  // Person p = new Person();
+  Student s = new Student();
+  s.run();
+}
+abstract class Person {
+  void run();
+}
+class Student extends Person {
+  @override
+  void run() {
+    print('run');
+  }
+}
+```
