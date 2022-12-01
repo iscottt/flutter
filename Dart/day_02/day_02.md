@@ -360,3 +360,21 @@ class Student extends Person {
   }
 }
 ```
+### 2.10 Dart中的接口
+**Dart中的接口**
+```dart
+void main() {
+  // Person p = new Person();
+  Student s = new Student();
+  s.run();
+}
+abstract class Person {
+  void run();
+}
+class Student extends Person {
+  @override
+  void run() {
+    print('run');
+  }
+}
+```
