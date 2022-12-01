@@ -365,3 +365,19 @@ void main() {
   }
 }
 ```
+**Dart中的异常处理**
+```dart
+void main() {
+  try {
+    int a = 10;
+    int b = 0;
+    print(a ~/ b);
+  } on IntegerDivisionByZeroException {
+    print('除数不能为0');
+  } catch (e) {
+    print(e);
+  } finally {
+    print('finally');
+  }
+}
+```
