@@ -6,7 +6,9 @@
 - Windows平台：choco install dart-sdk
 - Linux平台：sudo apt-get install dart
 - 或者直接下载[安装包](https://www.dartlang.org/install/archive)
-> 安装完成后，可以通过命令行 dart --version 查看版本号
+
+安装完成后，可以通过命令行 dart --version 查看版本号
+
 ### 1.1.2 安装Dart插件
 - [VSCode](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code)
 - [Android Studio](https://plugins.jetbrains.com/plugin/6351-dart)
@@ -27,7 +29,8 @@ void main() {
 ```
 ### 2.2 Dart变量
 > Dart是强类型语言，变量必须要有类型，变量的类型是在编译时确定的，变量的类型一旦确定，就不能改变
-> Dart中的变量分为两种：1.值类型 2.引用类型
+
+- Dart中的变量分为两种：1.值类型 2.引用类型
 - 值类型：int、double、bool、String、List、Map、Set
 - 引用类型：类、接口、函数
 - 变量未初始化时，值为null
@@ -35,7 +38,7 @@ void main() {
 - 值类型的变量在内存中是存储的它的值，而引用类型的变量在内存中是存储的它所引用的对象的地址
 - 值类型的变量是直接存储在栈中的是连续的，而引用类型的变量是存储在堆中的是不连续的，它的值是一个指针，指向它所引用的对象
 
-> 语法：var 变量名 = 值;
+**语法：var 变量名 = 值;**
 ```dart
 void main() {
   var name = '张三';
@@ -48,7 +51,7 @@ void main() {
   print(flag);
 }
 ```
-> 语法：数据类型 变量名 = 值;
+**语法：数据类型 变量名 = 值;**
 ```dart
 void main() {
   String name = '张三';
@@ -78,7 +81,7 @@ void main() {
 ```
 
 ### 2.4 Dart字符串
-> Dart中的字符串有两种：1.单引号 2.双引号
+**Dart中的字符串有两种：1.单引号 2.双引号**
 ```dart
 void main() {
   String str1 = 'hello world';
@@ -87,7 +90,7 @@ void main() {
   print(str2);
 }
 ```
-> Dart中的字符串可以使用+号进行拼接
+**Dart中的字符串可以使用+号进行拼接**
 ```dart
 void main() {
   String str1 = 'hello';
@@ -96,7 +99,7 @@ void main() {
   print(str3);
 }
 ```
-> Dart中的字符串可以使用\$进行变量的拼接
+**Dart中的字符串可以使用\$进行变量的拼接**
 ```dart
 void main() {
   String name = '张三';
@@ -105,7 +108,7 @@ void main() {
   print(str);
 }
 ```
-> Dart中的字符串可以使用${}进行表达式的拼接
+**Dart中的字符串可以使用${}进行表达式的拼接**
 ```dart
 void main() {
   int a = 10;
@@ -114,7 +117,7 @@ void main() {
   print(str);
 }
 ```
-> Dart中的字符串可以使用三个单引号或者三个双引号进行多行字符串的拼接
+**Dart中的字符串可以使用三个单引号或者三个双引号进行多行字符串的拼接**
 ```dart
 void main() {
   String str1 = '''
@@ -130,6 +133,7 @@ void main() {
 }
 ```
 > Dart中的字符串常用方法
+
 - 1.length：获取字符串的长度
 - 2.isEmpty：判断字符串是否为空
 - 3.isNotEmpty：判断字符串是否不为空
@@ -163,7 +167,8 @@ void main() {
 ```
 ### 2.5 Dart运算符
 > Dart中的运算符分为：算术运算符、关系运算符、逻辑运算符、赋值运算符、条件运算符、类型运算符
-> Dart中的算术运算符有：+、-、*、/、~/、%
+
+**Dart中的算术运算符有：+、-、*、/、~/、%**
 ```dart
 void main() {
   int a = 10;
@@ -176,7 +181,7 @@ void main() {
   print(a % b);
 }
 ```
-> Dart中的关系运算符有：==、!=、>、<、>=、<=
+**Dart中的关系运算符有：==、!=、>、<、>=、<=**
 ```dart
 void main() {
   int a = 10;
@@ -189,7 +194,7 @@ void main() {
   print(a <= b);
 }
 ```
-> Dart中的逻辑运算符有：&&、||、!
+**Dart中的逻辑运算符有：&&、||、!**
 ```dart
 void main() {
   bool flag1 = true;
@@ -199,7 +204,7 @@ void main() {
   print(!flag1);
 }
 ```
-> Dart中的赋值运算符有：=、+=、-=、*=、/=、~/=、%=、??=
+**Dart中的赋值运算符有：=、+=、-=、*=、/=、~/=、%=、??=**
 ```dart
 void main() {
   int a = 10;
@@ -219,7 +224,7 @@ void main() {
   print(a);
 }
 ```
-> Dart中的条件运算符有：?:、??、??=
+**Dart中的条件运算符有：?:、??、??=**
 ```dart
 void main() {
   int a = 10;
@@ -233,7 +238,7 @@ void main() {
   print(f);
 }
 ```
-> Dart中的类型运算符有：as、is、is!
+**Dart中的类型运算符有：as、is、is!**
 ```dart
 void main() {
   var a = 'hello';
@@ -241,7 +246,7 @@ void main() {
   print(a is! int);
 }
 ```
-> Dart中的级联运算符（..）
+**Dart中的级联运算符（..）**
 ```dart
 void main() {
   Person p = Person();
@@ -260,7 +265,8 @@ class Person {
 ```
 ### 2.6 Dart流程控制语句
 > Dart中的流程控制语句分为：if语句、switch语句、for语句、while语句、do-while语句、break语句、continue语句、label语句
-> Dart中的if语句
+
+**Dart中的if语句**
 ```dart
 void main() {
   int score = 60;
@@ -275,7 +281,7 @@ void main() {
   }
 }
 ```
-> Dart中的switch语句
+**Dart中的switch语句**
 ```dart
 void main() {
   int score = 60;
@@ -294,7 +300,7 @@ void main() {
   }
 }
 ```
-> Dart中的for语句
+**Dart中的for语句**
 ```dart
 void main() {
   for (int i = 0; i < 10; i++) {
@@ -302,7 +308,7 @@ void main() {
   }
 }
 ```
-> Dart中的while语句
+**Dart中的while语句**
 ```dart
 void main() {
   int i = 0;
@@ -312,7 +318,7 @@ void main() {
   }
 }
 ```
-> Dart中的do-while语句
+**Dart中的do-while语句**
 ```dart
 void main() {
   int i = 0;
@@ -322,7 +328,7 @@ void main() {
   } while (i < 10);
 }
 ```
-> Dart中的break语句
+**Dart中的break语句**
 ```dart
 void main() {
   for (int i = 0; i < 10; i++) {
@@ -333,7 +339,7 @@ void main() {
   }
 }
 ```
-> Dart中的continue语句
+**Dart中的continue语句**
 ```dart
 void main() {
   for (int i = 0; i < 10; i++) {
@@ -344,7 +350,7 @@ void main() {
   }
 }
 ```
-> Dart中的label语句
+**Dart中的label语句**
 ```dart
 void main() {
   outerLoop:
@@ -359,8 +365,3 @@ void main() {
   }
 }
 ```
-
-
-
-
-
