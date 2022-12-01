@@ -148,3 +148,162 @@ void printNum(int num) {
   print(num);
 }
 ```
+### 2.8 Dart中的类
+**Dart中的类**
+```dart
+void main() {
+  Person p = new Person();
+  p.name = '张三';
+  p.age = 20;
+  p.printInfo();
+}
+class Person {
+  String name;
+  int age;
+  void printInfo() {
+    print('$name $age');
+  }
+}
+```
+**Dart中的构造函数**
+```dart
+void main() {
+  Person p = new Person('张三', 20);
+  p.printInfo();
+}
+class Person {
+  String name;
+  int age;
+  Person(this.name, this.age);
+  void printInfo() {
+    print('$name $age');
+  }
+}
+```
+**Dart中的命名构造函数**
+```dart
+void main() {
+  Person p = new Person('张三', 20);
+  p.printInfo();
+  Person p1 = new Person.now();
+  p1.printInfo();
+}
+class Person {
+  String name;
+  int age;
+  Person(this.name, this.age);
+  Person.now() {
+    this.name = '李四';
+    this.age = 30;
+  }
+  void printInfo() {
+    print('$name $age');
+  }
+}
+```
+**Dart中的初始化列表**
+```dart
+void main() {
+  Person p = new Person('张三', 20);
+  p.printInfo();
+}
+class Person {
+  String name;
+  int age;
+  Person(this.name, this.age);
+  Person.now() : this('李四', 30);
+  void printInfo() {
+    print('$name $age');
+  }
+}
+```
+**Dart中的常量构造函数**
+```dart
+void main() {
+  Person p = new Person('张三', 20);
+  p.printInfo();
+}
+class Person {
+  final String name;
+  final int age;
+  const Person(this.name, this.age);
+  void printInfo() {
+    print('$name $age');
+  }
+}
+```
+**Dart中的工厂构造函数**
+```dart
+void main() {
+  Person p = new Person('张三', 20);
+  p.printInfo();
+}
+class Person {
+  final String name;
+  final int age;
+  const Person(this.name, this.age);
+  factory Person.now() {
+    return new Person('李四', 30);
+  }
+  void printInfo() {
+    print('$name $age');
+  }
+}
+```
+**Dart中的类的继承**
+```dart
+void main() {
+  Student s = new Student();
+  s.name = '张三';
+  s.age = 20;
+  s.printInfo();
+}
+class Person {
+  String name;
+  int age;
+  void printInfo() {
+    print('$name $age');
+  }
+}
+class Student extends Person {}
+```
+**Dart中的类的继承构造函数**
+```dart
+void main() {
+  Student s = new Student('张三', 20);
+  s.printInfo();
+}
+class Person {
+  String name;
+  int age;
+  Person(this.name, this.age);
+  void printInfo() {
+    print('$name $age');
+  }
+}
+class Student extends Person {
+  Student(String name, int age) : super(name, age);
+}
+```
+**Dart中的类的继承重写方法**
+```dart
+void main() {
+  Student s = new Student('张三', 20);
+  s.printInfo();
+}
+class Person {
+  String name;
+  int age;
+  Person(this.name, this.age);
+  void printInfo() {
+    print('$name $age');
+  }
+}
+class Student extends Person {
+  Student(String name, int age) : super(name, age);
+  @override
+  void printInfo() {
+    print('name: $name age: $age');
+  }
+}
+```
