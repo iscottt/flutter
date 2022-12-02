@@ -5,6 +5,9 @@
 
 **Dart中的无参函数**
 ```dart
+/**
+ * 无参函数
+ */
 void main() {
   printPerson();
 }
@@ -23,6 +26,11 @@ void printPerson(String name, int age) {
 ```
 **Dart中的位置可选参数**
 ```dart
+/**
+ * 位置可选参数使用 [] 括起来
+ * 位置可选参数必须放在必选参数的后面
+ * 位置可选参数可以有多个可以设置默认值也可以不传值
+ */
 void main() {
   printPerson('张三', 20);
   printPerson('张三');
@@ -33,6 +41,12 @@ void printPerson(String name, [int age]) {
 ```
 **Dart中的命名可选参数**
 ```dart
+/**
+ * 命名可选参数使用 {} 括起来
+ * 命名可选参数必须放在必选参数的后面
+ * 命名可选参数可以有多个可以设置默认值也可以不传值
+ * 命名可选参数必须指定参数名,可以不按照定义的顺序传值也可以和位置可选参数一起使用
+ */
 void main() {
   printPerson('张三', age: 20);
   printPerson('张三');
